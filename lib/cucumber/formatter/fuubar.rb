@@ -15,6 +15,7 @@ module Cucumber
       def initialize(runtime, path_or_io, options)
         @runtime, @io, @options = runtime, ensure_io(path_or_io, "fuubar"), options
         @step_count = @issues_count = 0
+        @step_mother = step_mother
       end
 
       def after_features(features)
